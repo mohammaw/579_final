@@ -970,7 +970,7 @@ const quest_defualt = {
                ]
     };
 
-    const questCompletionStatus = {};
+    const questCompletionStatus = JSON.parse(localStorage.getItem('questCompletionStatus')) || {};
 
     function updateQuestList() {
         const questListElement = document.getElementById('questList');
@@ -981,7 +981,6 @@ const quest_defualt = {
 
         questListElement.innerHTML = '';
 
-        // Filter quests
         let filteredQuests = questData.quests.filter(quest => {
             const difficultyMatch = difficultyFilter === 'any' || quest.difficulty === difficultyFilter;
             const membersMatch = membersFilter === 'any' || quest.members.toString() === membersFilter;
@@ -994,12 +993,10 @@ const quest_defualt = {
             return difficultyMatch && membersMatch && questPointsMatch && completionMatch;
         });
 
-        // Sort by quest points if a specific quest point filter is applied (not 'any' or '5+')
         if (questPointsFilter !== 'any') {
             filteredQuests.sort((a, b) => a.questPoints - b.questPoints);
         }
 
-        // Display filtered and sorted quests
         filteredQuests.forEach(quest => {
             const listItem = document.createElement('li');
             listItem.classList.add('list-group-item');
@@ -1010,6 +1007,7 @@ const quest_defualt = {
             listItem.addEventListener('click', function() {
                 questCompletionStatus[quest.title] = !questCompletionStatus[quest.title];
                 listItem.classList.toggle('list-group-item-success', questCompletionStatus[quest.title]);
+                localStorage.setItem('questCompletionStatus', JSON.stringify(questCompletionStatus));
             });
 
             questListElement.appendChild(listItem);
@@ -1018,6 +1016,5 @@ const quest_defualt = {
 
     document.getElementById('applyFilters').addEventListener('click', updateQuestList);
 
-    // Initial list update on page load
     updateQuestList();
 });
