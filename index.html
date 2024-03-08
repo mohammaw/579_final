@@ -2,15 +2,68 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OSRS Quest and Achievement Tracker</title>
+    <title>OSRS Quest Tracker</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <h1>OSRS Quest Tracker</h1>
-    <input type="text" id="questFilter" onkeyup="filterQuests()" placeholder="Search for quests...">
-    <ul id="questList">
-    </ul>
+    <div class="container mt-5">
+        <h1>Old School RuneScape Quest Tracker</h1>
 
-    <script src="app.js"></script>
+        <div class="form-row align-items-center mb-3">
+            <div class="col-auto">
+                <label for="filterCompletion" class="my-1 mr-2">Completion Status:</label>
+                <select id="filterCompletion" class="custom-select my-1 mr-sm-2">
+                    <option value="any">Any Status</option>
+                    <option value="completed">Completed</option>
+                    <option value="notCompleted">Not Completed</option>
+                </select>
+            </div>
+            <div class="col-auto">
+                <label for="filterDifficulty" class="my-1 mr-2">Difficulty:</label>
+                <select id="filterDifficulty" class="custom-select my-1 mr-sm-2">
+                    <option value="any">Any Difficulty</option>
+                    <option value="Novice">Novice</option>
+                    <option value="Intermediate">Intermediate</option>
+                    <option value="Experienced">Experienced</option>
+                    <option value="Master">Master</option>
+                    <option value="Grandmaster">Grandmaster</option>
+                </select>
+            </div>
+            <div class="col-auto">
+                <label for="filterMembers" class="my-1 mr-2">Members:</label>
+                <select id="filterMembers" class="custom-select my-1 mr-sm-2">
+                    <option value="any">Either</option>
+                    <option value="true">Members Only</option>
+                    <option value="false">Free to Play</option>
+                </select>
+            </div>
+            <div class="col-auto">
+                <label for="filterQuestPoints" class="my-1 mr-2">Quest Points:</label>
+                <select id="filterQuestPoints" class="custom-select my-1 mr-sm-2">
+                    <option value="any">Any Quest Points</option>
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5+">5+</option>
+
+
+                </select>
+            </div>
+            <div class="col-auto">
+                <button id="applyFilters" class="btn btn-primary">Apply Filters</button>
+            </div>
+        </div>
+
+        <ul id="questList" class="list-group">
+        </ul>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="js/app.js"></script>
 </body>
 </html>
