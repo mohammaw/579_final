@@ -1,5 +1,3 @@
-document.addEventListener("DOMContentLoaded", function() {
-
 
 const quest_defualt = {
     "members": "true",
@@ -1017,4 +1015,3 @@ const quest_defualt = {
     document.getElementById('applyFilters').addEventListener('click', updateQuestList);
 
     updateQuestList();
-});
