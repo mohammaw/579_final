@@ -1,965 +1,932 @@
 
-const quest_defualt = {
-    "members": "true",
-    "questPoints": "2",
+const quest_default = {
+    "members": true,
+    "questPoints": 2,
 }
     const questData = {
             "quests": [
                 {
+                    ...quest_default,
                  "title": "Zogre Flesh Eaters",
                  "difficulty": "Intermediate",
-                 "members": true,
                  "questPoints": 1
                 },
                 {
+                    ...quest_default,
                  "title": "Witch's House",
                  "difficulty": "Intermediate",
-                 "members": true,
                  "questPoints": 4
                 },
                 {
+                    ...quest_default,
                  "title": "What Lies Below",
                  "difficulty": "Intermediate",
-                 "members": true,
                  "questPoints": 1
                 },
                 {
+                    ...quest_default,
                  "title": "Waterfall Quest",
                  "difficulty": "Intermediate",
-                 "members": true,
                  "questPoints": 1
                 },
                 {
+                    ...quest_default,
                  "title": "Watchtower",
                  "difficulty": "Intermediate",
-                 "members": true,
                  "questPoints": 4
                 },
                 {
+                    ...quest_default,
                  "title": "Wanted!",
                  "difficulty": "Intermediate",
-                 "members": true,
                  "questPoints": 1
                 },
                 {
+                    ...quest_default,
                  "title": "Underground Pass",
                  "difficulty": "Experienced",
-                 "members": true,
                  "questPoints": 5
                 },
                 {
+                    ...quest_default,
                  "title": "Troll Stronghold",
                  "difficulty": "Intermediate",
-                 "members": true,
                  "questPoints": 1
                 },
                 {
+                    ...quest_default,
                  "title": "Troll Romance",
                  "difficulty": "Intermediate",
-                 "members": true,
-                 "questPoints": 2
                 },
                 {
+                    ...quest_default,
                  "title": "Tribal Totem",
                  "difficulty": "Intermediate",
-                 "members": true,
                  "questPoints": 1
                 },
                 {
+                    ...quest_default,
                  "title": "Tree Gnome Village",
                  "difficulty": "Intermediate",
-                 "members": true,
-                 "questPoints": 2
                 },
                 {
+                    ...quest_default,
                  "title": "Tower of Life",
                  "difficulty": "Novice",
-                 "members": true,
-                 "questPoints": 2
                 },
                 {
+                    ...quest_default,
                  "title": "The Tourist Trap",
                  "difficulty": "Intermediate",
-                 "members": true,
-                 "questPoints": 2
                 },
                 {
+                    ...quest_default,
                  "title": "Throne of Miscellania",
                  "difficulty": "Experienced",
-                 "members": true,
                  "questPoints": 1
                 },
                 {
+                    ...quest_default,
                  "title": "Temple of the Eye",
                  "difficulty": "Intermediate",
-                 "members": true,
                  "questPoints": 1
                 },
                 {
+                    ...quest_default,
                  "title": "Temple of Ikov",
                  "difficulty": "Intermediate",
-                 "members": true,
                  "questPoints": 1
                 },
                 {
+                    ...quest_default,
                  "title": "Tears of Guthix",
                  "difficulty": "Intermediate",
-                 "members": true,
                  "questPoints": 1
                 },
                 {
+                    ...quest_default,
                  "title": "A Taste of Hope",
                  "difficulty": "Experienced",
-                 "members": true,
                  "questPoints": 1
                 },
                 {
+                    ...quest_default,
                  "title": "Tale of the Righteous",
                  "difficulty": "Intermediate",
-                 "members": true,
                  "questPoints": 1
                 },
                 {
+                    ...quest_default,
                  "title": "A Tail of Two Cats ",
                  "difficulty": "Intermediate",
-                 "members": true,
-                 "questPoints": 2
                 },
                 {
+                    ...quest_default,
                  "title": "Tai Bwo Wannai Trio",
                  "difficulty": "Intermediate",
-                 "members": true,
-                 "questPoints": 2
                 },
                 {
+                    ...quest_default,
                  "title": "Swan Song",
                  "difficulty": "Master",
-                 "members": true,
-                 "questPoints": 2
                 },
                 {
+                    ...quest_default,
                  "title": "Spirits of the Elid",
                  "difficulty": "Intermediate",
-                 "members": true,
-                 "questPoints": 2
                 },
                 {
+                    ...quest_default,
                  "title": "A Soul's Bane",
                  "difficulty": "Intermediate",
-                 "members": true,
                  "questPoints": 1
                 },
                 {
+                    ...quest_default,
                  "title": "Song of the Elves",
                  "difficulty": "Grandmaster",
-                 "members": true,
                  "questPoints": 4
                 },
                 {
+                    ...quest_default,
                  "title": "The Slug Menace",
                  "difficulty": "Intermediate",
-                 "members": true,
                  "questPoints": 1
                 },
                 {
+                    ...quest_default,
                  "title": "Sleeping Giants",
                  "difficulty": "Intermediate",
-                 "members": true,
                  "questPoints": 1
                 },
                 {
+                    ...quest_default,
                  "title": "Sins of the Father",
                  "difficulty": "Master",
-                 "members": true,
-                 "questPoints": 2
                 },
                 {
+                    ...quest_default,
                  "title": "Shilo Village",
                  "difficulty": "Intermediate",
-                 "members": true,
-                 "questPoints": 2
                 },
                 {
+                    ...quest_default,
                  "title": "Sheep Herder",
                  "difficulty": "Novice",
-                 "members": true,
                  "questPoints": 4
                 },
                 {
+                    ...quest_default,
                  "title": "Shadow of the Storm",
                  "difficulty": "Intermediate",
-                 "members": true,
                  "questPoints": 1
                 },
                 {
+                    ...quest_default,
                  "title": "Shades of Mort'ton",
                  "difficulty": "Intermediate",
-                 "members": true,
                  "questPoints": 3
                 },
                 {
+                    ...quest_default,
                  "title": "Secrets of the North",
                  "difficulty": "Master",
-                 "members": true,
-                 "questPoints": 2
                 },
                 {
+                    ...quest_default,
                  "title": "Sea Slug",
                  "difficulty": "Intermediate",
-                 "members": true,
                  "questPoints": 1
                 },
                 {
+                    ...quest_default,
                  "title": "Scorpion Catcher",
                  "difficulty": "Intermediate",
-                 "members": true,
                  "questPoints": 1
                 },
                 {
+                    ...quest_default,
                  "title": "Rum Deal",
                  "difficulty": "Experienced",
-                 "members": true,
-                 "questPoints": 2
                 },
                 {
+                    ...quest_default,
                  "title": "Royal Trouble",
                  "difficulty": "Experienced",
-                 "members": true,
                  "questPoints": 1
                 },
                 {
+                    ...quest_default,
                  "title": "Roving Elves",
                  "difficulty": "Experienced",
-                 "members": true,
                  "questPoints": 1
                 },
                 {
+                    ...quest_default,
                  "title": "Regicide",
                  "difficulty": "Experienced",
-                 "members": true,
                  "questPoints": 3
                 },
                 {
+                    ...quest_default,
                  "title": "Recruitment Drive",
                  "difficulty": "Novice",
-                 "members": true,
                  "questPoints": 1
                 },
                 {
+                    ...quest_default,
                  "title": "Recipe for Disaster",
                  "difficulty": "Grandmaster",
-                 "members": true,
                  "questPoints": 10
                 },
                 {
+                    ...quest_default,
                  "title": "Ratcatchers",
                  "difficulty": "Intermediate",
-                 "members": true,
-                 "questPoints": 2
                 },
                 {
+                    ...quest_default,
                  "title": "Rag and Bone Man II",
                  "difficulty": "Experienced",
-                 "members": true,
                  "questPoints": 1
                 },
                 {
+                    ...quest_default,
                  "title": "Rag and Bone Man I",
                  "difficulty": "Novice",
-                 "members": true,
                  "questPoints": 1
                 },
                 {
+                    ...quest_default,
                  "title": "The Queen of Thieves",
                  "difficulty": "Intermediate",
-                 "members": true,
                  "questPoints": 1
                 },
                 {
+                    ...quest_default,
                  "title": "Priest in Peril",
                  "difficulty": "Novice",
-                 "members": true,
                  "questPoints": 1
                 },
                 {
+                    ...quest_default,
                  "title": "A Porcine of Interest",
                  "difficulty": "Novice",
-                 "members": true,
                  "questPoints": 1
                 },
                 {
+                    ...quest_default,
                  "title": "Plague City",
                  "difficulty": "Novice",
-                 "members": true,
                  "questPoints": 1
                 },
                 {
+                    ...quest_default,
                  "title": "The Path of Glouphrie",
                  "difficulty": "Experienced",
-                 "members": true,
-                 "questPoints": 2
                 },
                 {
+                    ...quest_default,
                  "title": "One Small Favour",
                  "difficulty": "Experienced",
-                 "members": true,
-                 "questPoints": 2
                 },
                 {
+                    ...quest_default,
                  "title": "Olaf's Quest",
                  "difficulty": "Intermediate",
-                 "members": true,
                  "questPoints": 1
                 },
                 {
+                    ...quest_default,
                  "title": "Observatory Quest",
-                 "difficulty": "Intermediate",
-                 "members": true,
-                 "questPoints": 2
+                 "difficulty": "Intermediate"
                 },
                 {
+                    ...quest_default,
                  "title": "A Night at the Theatre",
-                 "difficulty": "Master",
-                 "members": true,
-                 "questPoints": 2
+                 "difficulty": "Master"
                 },
                 {
+                    ...quest_default,
                  "title": "Nature Spirit",
-                 "difficulty": "Intermediate",
-                 "members": true,
-                 "questPoints": 2
+                 "difficulty": "Intermediate"
                 },
                 {
+                    ...quest_default,
                  "title": "My Arm's Big Adventure",
                  "difficulty": "Experienced",
-                 "members": true,
                  "questPoints": 1
                 },
                 {
+                    ...quest_default,
                  "title": "Murder Mystery",
                  "difficulty": "Novice",
-                 "members": true,
                  "questPoints": 3
                 },
                 {
+                    ...quest_default,
                  "title": "Mourning's End Part II",
-                 "difficulty": "Master",
-                 "members": true,
-                 "questPoints": 2
+                 "difficulty": "Master"
                 },
                 {
+                    ...quest_default,
                  "title": "Mourning's End Part I",
-                 "difficulty": "Master",
-                 "members": true,
-                 "questPoints": 2
+                 "difficulty": "Master"
                 },
                 {
+                    ...quest_default,
                  "title": "Mountain Daughter",
-                 "difficulty": "Intermediate",
-                 "members": true,
-                 "questPoints": 2
+                 "difficulty": "Intermediate"
                 },
                 {
+                    ...quest_default,
                  "title": "Monkey Madness II",
                  "difficulty": "Grandmaster",
-                 "members": true,
                  "questPoints": 4
                 },
                 {
+                    ...quest_default,
                  "title": "Monkey Madness I",
                  "difficulty": "Master",
-                 "members": true,
                  "questPoints": 3
                 },
                 {
+                    ...quest_default,
                  "title": "Monk's Friend",
                  "difficulty": "Novice",
-                 "members": true,
                  "questPoints": 1
                 },
                 {
+                    ...quest_default,
                  "title": "Merlin's Crystal",
                  "difficulty": "Intermediate",
-                 "members": true,
                  "questPoints": 6
                 },
                 {
+                    ...quest_default,
                  "title": "Making History",
                  "difficulty": "Intermediate",
-                 "members": true,
                  "questPoints": 3
                 },
                 {
+                    ...quest_default,
                  "title": "Making Friends with My Arm",
-                 "difficulty": "Master",
-                 "members": true,
-                 "questPoints": 2
+                 "difficulty": "Master"
                 },
                 {
+                    ...quest_default,
                  "title": "Lunar Diplomacy",
-                 "difficulty": "Experienced",
-                 "members": true,
-                 "questPoints": 2
+                 "difficulty": "Experienced"
                 },
                 {
+                    ...quest_default,
                  "title": "The Lost Tribe",
                  "difficulty": "Intermediate",
-                 "members": true,
                  "questPoints": 1
                 },
                 {
+                    ...quest_default,
                  "title": "Lost City",
                  "difficulty": "Intermediate",
-                 "members": true,
                  "questPoints": 3
                 },
                 {
+                    ...quest_default,
                  "title": "Legends' Quest",
                  "difficulty": "Master",
-                 "members": true,
                  "questPoints": 4
                 },
                 {
+                    ...quest_default,
                  "title": "Land of the Goblins",
-                 "difficulty": "Experienced",
-                 "members": true,
-                 "questPoints": 2
+                 "difficulty": "Experienced"
                 },
                 {
+                    ...quest_default,
                  "title": "A Kingdom Divided",
-                 "difficulty": "Experienced",
-                 "members": true,
-                 "questPoints": 2
+                 "difficulty": "Experienced"
                 },
                 {
+                    ...quest_default,
                  "title": "King's Ransom",
                  "difficulty": "Experienced",
-                 "members": true,
                  "questPoints": 1
                 },
                 {
+                    ...quest_default,
                  "title": "Jungle Potion",
                  "difficulty": "Novice",
-                 "members": true,
                  "questPoints": 1
                 },
                 {
+                    ...quest_default,
                  "title": "In Search of the Myreque",
-                 "difficulty": "Intermediate",
-                 "members": true,
-                 "questPoints": 2
+                 "difficulty": "Intermediate"
                 },
                 {
+                    ...quest_default,
                  "title": "In Aid of the Myreque",
-                 "difficulty": "Intermediate",
-                 "members": true,
-                 "questPoints": 2
+                 "difficulty": "Intermediate"
                 },
                 {
+                    ...quest_default,
                  "title": "Icthlarin's Little Helper",
-                 "difficulty": "Intermediate",
-                 "members": true,
-                 "questPoints": 2
+                 "difficulty": "Intermediate"
                 },
                 {
+                    ...quest_default,
                  "title": "Horror from the Deep",
-                 "difficulty": "Intermediate",
-                 "members": true,
-                 "questPoints": 2
+                 "difficulty": "Intermediate"
                 },
                 {
+                    ...quest_default,
                  "title": "Holy Grail",
-                 "difficulty": "Intermediate",
-                 "members": true,
-                 "questPoints": 2
+                 "difficulty": "Intermediate"
                 },
                 {
+                    ...quest_default,
                  "title": "Heroes' Quest",
                  "difficulty": "Experienced",
-                 "members": true,
                  "questPoints": 1
                 },
                 {
+                    ...quest_default,
                  "title": "Hazeel Cult",
                  "difficulty": "Novice",
-                 "members": true,
                  "questPoints": 1
                 },
                 {
+                    ...quest_default,
                  "title": "Haunted Mine",
-                 "difficulty": "Experienced",
-                 "members": true,
-                 "questPoints": 2
+                 "difficulty": "Experienced"
                 },
                 {
+                    ...quest_default,
                  "title": "The Hand in the Sand",
                  "difficulty": "Intermediate",
-                 "members": true,
                  "questPoints": 1
                 },
                 {
+                    ...quest_default,
                  "title": "Grim Tales",
                  "difficulty": "Master",
-                 "members": true,
                  "questPoints": 1
                 },
                 {
+                    ...quest_default,
                  "title": "The Great Brain Robbery",
-                 "difficulty": "Experienced",
-                 "members": true,
-                 "questPoints": 2
+                 "difficulty": "Experienced"
                 },
                 {
+                    ...quest_default,
                  "title": "The Grand Tree",
                  "difficulty": "Intermediate",
-                 "members": true,
                  "questPoints": 5
                 },
                 {
+                    ...quest_default,
                  "title": "The Golem",
                  "difficulty": "Intermediate",
-                 "members": true,
                  "questPoints": 1
                 },
                 {
+                    ...quest_default,
                  "title": "The Giant Dwarf",
-                 "difficulty": "Intermediate",
-                 "members": true,
-                 "questPoints": 2
+                 "difficulty": "Intermediate"
                 },
                 {
+                    ...quest_default,
                  "title": "Ghosts Ahoy",
-                 "difficulty": "Intermediate",
-                 "members": true,
-                 "questPoints": 2
+                 "difficulty": "Intermediate"
                 },
                 {
+                    ...quest_default,
                  "title": "Getting Ahead",
                  "difficulty": "Intermediate",
-                 "members": true,
                  "questPoints": 1
                 },
                 {
+                    ...quest_default,
                  "title": "Gertrude's Cat",
                  "difficulty": "Novice",
-                 "members": true,
                  "questPoints": 1
                 },
                 {
+                    ...quest_default,
                  "title": "Garden of Tranquillity",
-                 "difficulty": "Intermediate",
-                 "members": true,
-                 "questPoints": 2
+                 "difficulty": "Intermediate"
                 },
                 {
+                    ...quest_default,
                  "title": "The Garden of Death",
                  "difficulty": "Intermediate",
-                 "members": true,
                  "questPoints": 1
                 },
                 {
+                    ...quest_default,
                  "title": "The Fremennik Trials",
                  "difficulty": "Intermediate",
-                 "members": true,
                  "questPoints": 3
                 },
                 {
+                    ...quest_default,
                  "title": "The Fremennik Isles",
                  "difficulty": "Experienced",
-                 "members": true,
                  "questPoints": 1
                 },
                 {
+                    ...quest_default,
                  "title": "The Fremennik Exiles",
-                 "difficulty": "Master",
-                 "members": true,
-                 "questPoints": 2
+                 "difficulty": "Master"
                 },
                 {
+                    ...quest_default,
                  "title": "The Forsaken Tower",
                  "difficulty": "Intermediate",
-                 "members": true,
                  "questPoints": 1
                 },
                 {
+                    ...quest_default,
                  "title": "Forgettable Tale...",
-                 "difficulty": "Intermediate",
-                 "members": true,
-                 "questPoints": 2
+                 "difficulty": "Intermediate"
                 },
                 {
+                    ...quest_default,
                  "title": "Fishing Contest",
                  "difficulty": "Novice",
-                 "members": true,
                  "questPoints": 1
                 },
                 {
+                    ...quest_default,
                  "title": "Fight Arena",
-                 "difficulty": "Intermediate",
-                 "members": true,
-                 "questPoints": 2
+                 "difficulty": "Intermediate"
                 },
                 {
+                    ...quest_default,
                  "title": "The Feud",
                  "difficulty": "Intermediate",
-                 "members": true,
                  "questPoints": 1
                 },
                 {
+                    ...quest_default,
                  "title": "Family Crest",
                  "difficulty": "Experienced",
-                 "members": true,
                  "questPoints": 1
                 },
                 {
+                    ...quest_default,
                  "title": "Fairytale II - Cure a Queen",
-                 "difficulty": "Experienced",
-                 "members": true,
-                 "questPoints": 2
+                 "difficulty": "Experienced"
                 },
                 {
+                    ...quest_default,
                  "title": "Fairytale I - Growing Pains",
-                 "difficulty": "Intermediate",
-                 "members": true,
-                 "questPoints": 2
+                 "difficulty": "Intermediate"
                 },
                 {
+                    ...quest_default,
                  "title": "The Eyes of Glouphrie",
-                 "difficulty": "Intermediate",
-                 "members": true,
-                 "questPoints": 2
+                 "difficulty": "Intermediate"
                 },
                 {
+                    ...quest_default,
                  "title": "Enlightened Journey",
                  "difficulty": "Intermediate",
-                 "members": true,
                  "questPoints": 1
                 },
                 {
+                    ...quest_default,
                  "title": "Enakhra's Lament",
-                 "difficulty": "Experienced",
-                 "members": true,
-                 "questPoints": 2
+                 "difficulty": "Experienced"
                 },
                 {
+                    ...quest_default,
                  "title": "Elemental Workshop II",
                  "difficulty": "Intermediate",
-                 "members": true,
                  "questPoints": 1
                 },
                 {
+                    ...quest_default,
                  "title": "Elemental Workshop I",
                  "difficulty": "Novice",
-                 "members": true,
                  "questPoints": 1
                 },
                 {
+                    ...quest_default,
                  "title": "Eagles' Peak",
-                 "difficulty": "Novice",
-                 "members": true,
-                 "questPoints": 2
+                 "difficulty": "Novice"
                 },
                 {
+                    ...quest_default,
                  "title": "Eadgar's Ruse",
                  "difficulty": "Intermediate",
-                 "members": true,
                  "questPoints": 1
                 },
                 {
+                    ...quest_default,
                  "title": "Dwarf Cannon",
                  "difficulty": "Novice",
-                 "members": true,
                  "questPoints": 1
                 },
                 {
+                    ...quest_default,
                  "title": "Druidic Ritual",
                  "difficulty": "Novice",
-                 "members": true,
                  "questPoints": 4
                 },
                 {
+                    ...quest_default,
                  "title": "Dream Mentor",
-                 "difficulty": "Master",
-                 "members": true,
-                 "questPoints": 2
+                 "difficulty": "Master"
                 },
                 {
+                    ...quest_default,
                  "title": "Dragon Slayer II",
                  "difficulty": "Grandmaster",
-                 "members": true,
                  "questPoints": 5
                 },
                 {
+                    ...quest_default,
                  "title": "The Dig Site",
-                 "difficulty": "Intermediate",
-                 "members": true,
-                 "questPoints": 2
+                 "difficulty": "Intermediate"
                 },
                 {
+                    ...quest_default,
                  "title": "Devious Minds",
                  "difficulty": "Experienced",
-                 "members": true,
                  "questPoints": 1
                 },
                 {
+                    ...quest_default,
                  "title": "Desert Treasure II - The Fallen Empire",
                  "difficulty": "Grandmaster",
-                 "members": true,
                  "questPoints": 5
                 },
                 {
+                    ...quest_default,
                  "title": "Desert Treasure I",
                  "difficulty": "Master",
-                 "members": true,
                  "questPoints": 3
                 },
                 {
+                    ...quest_default,
                  "title": "The Depths of Despair",
                  "difficulty": "Intermediate",
-                 "members": true,
                  "questPoints": 1
                 },
                 {
+                    ...quest_default,
                  "title": "Defender of Varrock",
-                 "difficulty": "Experienced",
-                 "members": true,
-                 "questPoints": 2
+                 "difficulty": "Experienced"
                 },
                 {
+                    ...quest_default,
                  "title": "Death to the Dorgeshuun",
                  "difficulty": "Intermediate",
-                 "members": true,
                  "questPoints": 1
                 },
                 {
+                    ...quest_default,
                  "title": "Death Plateau",
                  "difficulty": "Novice",
-                 "members": true,
                  "questPoints": 1
                 },
                 {
+                    ...quest_default,
                  "title": "Darkness of Hallowvale",
-                 "difficulty": "Experienced",
-                 "members": true,
-                 "questPoints": 2
+                 "difficulty": "Experienced"
                 },
                 {
+                    ...quest_default,
                  "title": "Creature of Fenkenstrain",
-                 "difficulty": "Intermediate",
-                 "members": true,
-                 "questPoints": 2
+                 "difficulty": "Intermediate"
                 },
                 {
+                    ...quest_default,
                  "title": "Contact!",
                  "difficulty": "Experienced",
-                 "members": true,
                  "questPoints": 1
                 },
                 {
+                    ...quest_default,
                  "title": "Cold War",
                  "difficulty": "Intermediate",
-                 "members": true,
                  "questPoints": 1
                 },
                 {
+                    ...quest_default,
                  "title": "Clock Tower",
                  "difficulty": "Novice",
-                 "members": true,
                  "questPoints": 1
                 },
                 {
+                    ...quest_default,
                  "title": "Client of Kourend",
                  "difficulty": "Novice",
-                 "members": true,
                  "questPoints": 1
                 },
                 {
+                    ...quest_default,
                  "title": "Children of the Sun",
                  "difficulty": "Novice",
-                 "members": true,
                  "questPoints": 1
                 },
                 {
+                    ...quest_default,
                  "title": "Cabin Fever",
-                 "difficulty": "Experienced",
-                 "members": true,
-                 "questPoints": 2
+                 "difficulty": "Experienced"
                 },
                 {
+                    ...quest_default,
                  "title": "Bone Voyage",
                  "difficulty": "Intermediate",
-                 "members": true,
                  "questPoints": 1
                 },
                 {
+                    ...quest_default,
                  "title": "Biohazard",
                  "difficulty": "Novice",
-                 "members": true,
                  "questPoints": 3
                 },
                 {
+                    ...quest_default,
                  "title": "Big Chompy Bird Hunting",
-                 "difficulty": "Intermediate",
-                 "members": true,
-                 "questPoints": 2
+                 "difficulty": "Intermediate"
                 },
                 {
+                    ...quest_default,
                  "title": "Between a Rock...",
-                 "difficulty": "Experienced",
-                 "members": true,
-                 "questPoints": 2
+                 "difficulty": "Experienced"
                 },
                 {
+                    ...quest_default,
                  "title": "Beneath Cursed Sands",
-                 "difficulty": "Master",
-                 "members": true,
-                 "questPoints": 2
+                 "difficulty": "Master"
                 },
                 {
+                    ...quest_default,
                  "title": "The Ascent of Arceuus",
                  "difficulty": "Intermediate",
-                 "members": true,
                  "questPoints": 1
                 },
                 {
+                    ...quest_default,
                  "title": "Another Slice of H.A.M.",
                  "difficulty": "Intermediate",
-                 "members": true,
                  "questPoints": 1
                 },
                 {
+                    ...quest_default,
                  "title": "Animal Magnetism",
                  "difficulty": "Intermediate",
-                 "members": true,
                  "questPoints": 1
                 },
                 {
+                    ...quest_default,
                  "title": "X Marks the Spot",
                  "difficulty": "Novice",
                  "members": false,
                  "questPoints": 1
                 },
                 {
+                    ...quest_default,
                  "title": "Witch's Potion",
                  "difficulty": "Novice",
                  "members": false,
                  "questPoints": 1
                 },
                 {
+                    ...quest_default,
                  "title": "Vampyre Slayer",
                  "difficulty": "Intermediate",
                  "members": false,
                  "questPoints": 3
                 },
                 {
+                    ...quest_default,
                  "title": "Shield of Arrav",
                  "difficulty": "Novice",
                  "members": false,
                  "questPoints": 1
                 },
                 {
+                    ...quest_default,
                  "title": "Sheep Shearer",
                  "difficulty": "Novice",
                  "members": false,
                  "questPoints": 1
                 },
                 {
+                    ...quest_default,
                  "title": "Rune Mysteries",
                  "difficulty": "Novice",
                  "members": false,
                  "questPoints": 1
                 },
                 {
+                    ...quest_default,
                  "title": "Romeo & Juliet",
                  "difficulty": "Novice",
                  "members": false,
                  "questPoints": 5
                 },
                 {
+                    ...quest_default,
                  "title": "The Restless Ghost",
                  "difficulty": "Novice",
                  "members": false,
                  "questPoints": 1
                 },
                 {
+                    ...quest_default,
                  "title": "Prince Ali Rescue",
                  "difficulty": "Novice",
                  "members": false,
                  "questPoints": 3
                 },
                 {
+                    ...quest_default,
                  "title": "Pirate's Treasure",
                  "difficulty": "Novice",
                  "members": false,
-                 "questPoints": 2
                 },
                 {
+                    ...quest_default,
                  "title": "Misthalin Mystery",
                  "difficulty": "Novice",
                  "members": false,
                  "questPoints": 1
                 },
                 {
+                    ...quest_default,
                  "title": "The Knight's Sword",
                  "difficulty": "Intermediate",
                  "members": false,
                  "questPoints": 1
                 },
                 {
+                    ...quest_default,
                  "title": "Imp Catcher",
                  "difficulty": "Novice",
                  "members": false,
                  "questPoints": 1
                 },
                 {
+                    ...quest_default,
                  "title": "Goblin Diplomacy",
                  "difficulty": "Novice",
                  "members": false,
                  "questPoints": 5
                 },
                 {
+                    ...quest_default,
                  "title": "Ernest the Chicken",
                  "difficulty": "Novice",
                  "members": false,
                  "questPoints": 4
                 },
                 {
+                    ...quest_default,
                  "title": "Dragon Slayer I",
                  "difficulty": "Experienced",
                  "members": false,
-                 "questPoints": 2
                 },
                 {
+                    ...quest_default,
                  "title": "Doric's Quest",
                  "difficulty": "Novice",
                  "members": false,
                  "questPoints": 1
                 },
                 {
+                    ...quest_default,
                  "title": "Demon Slayer",
                  "difficulty": "Novice",
                  "members": false,
                  "questPoints": 3
                 },
                 {
+                    ...quest_default,
                  "title": "The Corsair Curse",
                  "difficulty": "Intermediate",
                  "members": false,
-                 "questPoints": 2
                 },
                 {
+                    ...quest_default,
                  "title": "Cook's Assistant",
                  "difficulty": "Novice",
                  "members": false,
                  "questPoints": 1
                 },
                 {
+                    ...quest_default,
                  "title": "Black Knights' Fortress",
                  "difficulty": "Intermediate",
                  "members": false,
                  "questPoints": 3
                 },
                 {
+                    ...quest_default,
                  "title": "Below Ice Mountain",
                  "difficulty": "Novice",
                  "members": false,
