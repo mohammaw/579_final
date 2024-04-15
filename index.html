@@ -3,68 +3,104 @@
 <head>
     <meta charset="UTF-8">
     <title>OSRS Quest Tracker</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <div class="container mt-5">
-        <h1>Old School RuneScape Quest Tracker</h1>
-        <div class="col-auto">
-            <label for="searchInput" class="my-1 mr-2">Search:</label>
-            <input type="text" id="searchInput" class="form-control my-1 mr-sm-2" placeholder="Enter quest name...">
+        <div class="text-center mb-4">
+            <img src="images/Old_School_RuneScape_logo.webp" alt="Old School RuneScape Logo" class="img-fluid">
         </div>
-        <div class="form-row align-items-center mb-3">
-            <div class="col-auto">
-                <label for="filterCompletion" class="my-1 mr-2">Completion Status:</label>
-                <select id="filterCompletion" class="custom-select my-1 mr-sm-2">
-                    <option value="any">Any Status</option>
-                    <option value="completed">Completed</option>
-                    <option value="notCompleted">Not Completed</option>
-                </select>
+        <h1>Quest Tracker</h1>
+        <h4 class="completion-status">Completion Status</h4>
+        <div class="progress my-4">
+            <div id="questCompletionProgressBar" class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%;">0%</div>
+        </div>
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="basic-addon1">Search</span>
             </div>
-            <div class="col-auto">
-                <label for="filterDifficulty" class="my-1 mr-2">Difficulty:</label>
-                <select id="filterDifficulty" class="custom-select my-1 mr-sm-2">
-                    <option value="any">Any Difficulty</option>
-                    <option value="Novice">Novice</option>
-                    <option value="Intermediate">Intermediate</option>
-                    <option value="Experienced">Experienced</option>
-                    <option value="Master">Master</option>
-                    <option value="Grandmaster">Grandmaster</option>
-                </select>
-            </div>
-            <div class="col-auto">
-                <label for="filterMembers" class="my-1 mr-2">Members:</label>
-                <select id="filterMembers" class="custom-select my-1 mr-sm-2">
-                    <option value="any">Either</option>
-                    <option value="true">Members Only</option>
-                    <option value="false">Free to Play</option>
-                </select>
-            </div>
-            <div class="col-auto">
-                <label for="filterQuestPoints" class="my-1 mr-2">Quest Points:</label>
-                <select id="filterQuestPoints" class="custom-select my-1 mr-sm-2">
-                    <option value="any">Any Quest Points</option>
-                    <option value="0">0</option>
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5+">5+</option>
-                </select>
-            </div>
-            <div class="col-auto">
+            <input type="text" id="searchInput" class="form-control" placeholder="Enter quest name..." aria-label="Search" aria-describedby="basic-addon1">
+        </div>
+        <div class="row">
+            <div class="col-md-3">
+                <h4> Quest  Filters</h4>
+                <div class="mb-3">
+                    <label for="filterCompletion" class="form-label">Completion Status:</label>
+                    <select id="filterCompletion" class="form-control">
+                        <option value="any">Any Status</option>
+                        <option value="completed">Completed</option>
+                        <option value="notCompleted">Not Completed</option>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label for="filterDifficulty" class="form-label">Difficulty:</label>
+                    <select id="filterDifficulty" class="form-control">
+                        <option value="any">Any Difficulty</option>
+                        <option value="Novice">Novice</option>
+                        <option value="Intermediate">Intermediate</option>
+                        <option value="Experienced">Experienced</option>
+                        <option value="Master">Master</option>
+                        <option value="Grandmaster">Grandmaster</option>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label for="filterMembers" class="form-label">Members:</label>
+                    <select id="filterMembers" class="form-control">
+                        <option value="any">Either</option>
+                        <option value="true">Members Only</option>
+                        <option value="false">Free to Play</option>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label for="filterQuestPoints" class="form-label">Quest Points:</label>
+                    <select id="filterQuestPoints" class="form-control">
+                        <option value="any">Any Quest Points</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5+">5+</option>
+                    </select>
+                </div>
                 <button id="applyFilters" class="btn btn-primary">Apply Filters</button>
+                <button id="clearFilters" class="btn btn-secondary">Clear All</button>
+            </div>
+            <div class="col-md-9">
+                    <div id="questList" class="row">
+                        <!-- Quests will be displayed here -->
+                    </div>
             </div>
         </div>
-
-        <ul id="questList" class="list-group">
-        </ul>
+        <nav aria-label="page-nav" class="my-4">
+            <ul class="pagination justify-content-center">
+                <li class="page-item">
+                    <button class="page-link" id="prevPage">Previous</button>
+                </li>
+                <li class="page-item">
+                    <span id="pageInfo" class="page-link">Page 1 of X</span>
+                </li>
+                <li class="page-item">
+                    <button class="page-link" id="nextPage">Next</button>
+                </li>
+            </ul>
+        </nav>
     </div>
-
+    <div id="congratulationsOverlay">
+        <h1>Congratulations!</h1>
+        <p>You've done it! You've made your 12-year-old self proud!</p>
+        <div>
+            <img src="https://oldschool.runescape.wiki/images/Quest_point_cape_emote.gif?49954" alt="Celebratory Emote">
+        </div>
+        <p>
+            <a href="#" onclick="hideOverlay();">Return to Tracker</a>
+        </p>
+    </div>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="js/questData.js"></script>
     <script src="js/app.js"></script>
 </body>
 </html>
