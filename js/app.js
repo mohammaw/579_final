@@ -943,6 +943,7 @@ const quest_default = {
         const membersFilter = document.getElementById('filterMembers').value;
         const questPointsFilter = document.getElementById('filterQuestPoints').value;
         const completionFilter = document.getElementById('filterCompletion').value;
+        const searchInput = document.getElementById('searchInput').value.toLowerCase(); // Get the search input and convert it to lowercase
 
         questListElement.innerHTML = '';
 
@@ -955,7 +956,10 @@ const quest_default = {
             }
             const completionMatch = completionFilter === 'any' || (completionFilter === 'completed' && questCompletionStatus[quest.title]) || (completionFilter === 'notCompleted' && !questCompletionStatus[quest.title]);
 
-            return difficultyMatch && membersMatch && questPointsMatch && completionMatch;
+            // Add search functionality by checking if the quest title includes the search input
+            const searchMatch = quest.title.toLowerCase().includes(searchInput);
+
+            return difficultyMatch && membersMatch && questPointsMatch && completionMatch && searchMatch;
         });
 
         if (questPointsFilter !== 'any') {
@@ -980,5 +984,8 @@ const quest_default = {
     }
 
     document.getElementById('applyFilters').addEventListener('click', updateQuestList);
+
+    // Trigger updateQuestList() when the search input changes
+    document.getElementById('searchInput').addEventListener('input', updateQuestList);
 
     updateQuestList();
