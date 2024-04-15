@@ -30,7 +30,7 @@ const updateQuestCompletionProgressBar = () => {
     progressBar.setAttribute('aria-valuenow', completionPercentage.toFixed(2));
     progressBar.textContent = completionPercentage > 4 ? `${completionPercentage.toFixed(2)}%` : '';
 
-    if (completionPercentage >= 3) {
+    if (completionPercentage >= 100) {
         showCongratulationsOverlay();
     }
 };
