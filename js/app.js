@@ -79,6 +79,7 @@ const handleFilterChange = () => {
         localStorage.setItem('questCompletionStatus', JSON.stringify(questCompletionStatus));
         currentPage = 1;
         updateQuestList();
+        updateQuestCompletionProgressBar();
     });
 };
 
