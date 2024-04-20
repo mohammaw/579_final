@@ -46,15 +46,23 @@ const hideOverlay = () => {
 // Initializes the quest card with completion status and visual icon
 const initializeQuestCard = (card, quest) => {
     if (questCompletionStatus[quest.title]) {
-        card.classList.add('border-success');
+        card.classList.add('complete');
+        card.classList.remove('incomplete');
+        // Set the hover text for the card for visual feedback
+        card.setAttribute('data-hover-text', 'Click to mark incomplete');
     } else {
-        card.classList.remove('border-success');
+        card.classList.add('incomplete');
+        card.classList.remove('complete');
+        // Set the hover text for the card for visual feedback
+        card.setAttribute('data-hover-text', 'Click to mark completed');
     }
     updateCheckmarkIcon(card, questCompletionStatus[quest.title]);
 };
 
+
 // Event Handlers
 const handleQuestCardClick = (card, quest) => {
+    // Toggle Quest Completion Status
     card.addEventListener('click', () => {
         questCompletionStatus[quest.title] = !questCompletionStatus[quest.title];
         localStorage.setItem('questCompletionStatus', JSON.stringify(questCompletionStatus));
@@ -64,6 +72,7 @@ const handleQuestCardClick = (card, quest) => {
 };
 
 const handleFilterChange = () => {
+    // Apply Filters Button
     document.querySelector('#applyFilters').addEventListener('click', () => {
         currentPage = 1;
         updateQuestList();
@@ -72,6 +81,7 @@ const handleFilterChange = () => {
         currentPage = 1;
         updateQuestList();
     });
+    // Clear All Filters Button
     document.querySelector('#clearFilters').addEventListener('click', () => {
         document.querySelectorAll('.form-control').forEach(select => select.value = 'any');
         document.querySelector('#searchInput').value = '';
@@ -80,6 +90,16 @@ const handleFilterChange = () => {
         currentPage = 1;
         updateQuestList();
         updateQuestCompletionProgressBar();
+    });
+    // Clear Filter Button
+    document.querySelector('#clearFilterButton').addEventListener('click', () => {
+        document.querySelector('#filterCompletion').value = 'any';
+        document.querySelector('#filterDifficulty').value = 'any';
+        document.querySelector('#filterMembers').value = 'any';
+        document.querySelector('#filterQuestPoints').value = 'any';
+        document.querySelector('#searchInput').value = '';
+        currentPage = 1;
+        updateQuestList();
     });
 };
 
@@ -100,9 +120,10 @@ const handlePagination = () => {
 
 // Main Function to Update the Quest List
 const updateQuestList = () => {
+    // Clear the quest list before updating
     const questListElement = document.querySelector('#questList');
     questListElement.innerHTML = '';
-
+    // Get the selected filters from user input
     const filters = {
         difficultyFilter: document.querySelector('#filterDifficulty').value,
         membersFilter: document.querySelector('#filterMembers').value,
@@ -110,9 +131,10 @@ const updateQuestList = () => {
         completionFilter: document.querySelector('#filterCompletion').value,
         searchInput: document.querySelector('#searchInput').value.toLowerCase()
     };
-
+    // Filter the quests based on the selected filters from user input
     let filteredQuests = questData.quests.filter(quest => {
         const { difficultyFilter, membersFilter, questPointsFilter, completionFilter, searchInput } = filters;
+        // Check of the quest matches difficulty, members, quest points, completion status and search input
         const difficultyMatch = difficultyFilter === 'any' || quest.difficulty === difficultyFilter;
         const membersMatch = membersFilter === 'any' || quest.members.toString() === membersFilter;
         let questPointsMatch = questPointsFilter === 'any' || parseInt(quest.questPoints) === parseInt(questPointsFilter);
@@ -197,7 +219,7 @@ const createGuideButton = (quest) => {
     return guideButton;
 };
 
-
+    updateQuestCompletionProgressBar();
     handleFilterChange();
     handlePagination();
     updateQuestList();
